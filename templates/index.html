@@ -1,0 +1,13 @@
+
+<form action="" method="POST">
+{% csrf_token %}
+    Name : {{form.Name}}
+    Email: {{form.email}}
+    Roll_No : {{form.Roll_No}}
+    <input type="submit" value="Add">
+</form>
+<div>
+    {% for stu in stu %}
+    <li>{{stu.Name}} | {{stu.email}} | {{stu.Roll_No}} | <a href="{{ stu.id }}/" >Edit</a> | <a href="edit/{{ stu.id }}/" >Single Edit</a> |<form action="delete/{{ stu.id }}/" method="POST">{% csrf_token %}<input type="submit" value="Delete"></form></li>
+    {% endfor %}
+</div>

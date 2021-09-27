@@ -1,0 +1,7 @@
+<form action="" method="POST">
+    {% csrf_token %}
+        Name : {{pi.Name}}
+        Email: {{pi.email}}
+        Roll_No : {{form.Roll_No}}
+        <input type="submit" value="Update">
+    </form> <a href="/" >Home</a>
